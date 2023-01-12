@@ -1,0 +1,62 @@
+<meta charset="UTF-8">
+<style>
+    h2 {
+        font-family: Helvetica;
+    }
+    .encabezado {
+        vertical-align: middle;
+    }
+    .lista {
+        height: 60%;
+    }
+    .tabla {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        font-size: 12px;
+        }
+    .tabla td {
+        padding-top: 4px;
+        padding-right: 6px;
+        padding-bottom: 2px;
+        padding-left: 6px;
+    }
+    .tabla td th {
+        text-align: center;
+        padding: 4px;
+        color: black;
+        font-size: 12;
+    }
+    .tabla td th tr:nth-child(even) {
+        background-color: #dddddd;
+    } 
+</style>
+
+<table style="table-layout: fixed;" width="100%">
+	<tbody>
+		<tr  class="encabezado">
+        <td colspan="1" width= "100" height="120" aling="left">
+            <img src="{{IMAGEN}}" alt="" width="100" height="100" />
+        </td>
+      
+		
+        <td colspan="2" align="center">  
+            <div>
+                <h2>{{NOMBRE}}</h2>
+            </div>
+        </td>
+		</tr>
+
+		<tr class="lista">
+			<td colspan="3" height="600px">
+                <hr>
+                <table cellspacing="0" class="tabla" width="100%" height="600px">
+                    <tr>
+                        <th>Descripción</th>
+                    </tr>
+                    {{DATOS}}
+                </table>
+            </td>
+		</tr>
+		
+	</tbody>
+</table>

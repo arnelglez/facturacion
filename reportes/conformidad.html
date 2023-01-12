@@ -1,0 +1,252 @@
+<meta charset="UTF-8">
+<style>
+    h3 {
+        font-family: Helvetica;
+    }
+    h5 {
+        font-family: Helvetica;
+        text-align: center;
+        font-size: 12px;
+    }
+    h6 {
+        font-family: Helvetica;
+        text-align: center;
+        font-size: 10px;
+    }
+    p {
+        font-family: Helvetica;
+        text-align: center;
+        font-size: 10px;
+    }
+    .encabezado {
+        vertical-align: middle;
+    }
+    .conformidad {
+        text-align: center;
+    }
+    span {
+        font-family: Helvetica;
+        font-size: 10px;    
+    }    
+    table {
+        padding: 10px;
+    }
+    table, tr, td {
+        padding: 3px;
+        width: 100%;
+    }
+</style>
+
+<table>
+    <tr  class="encabezado">
+        <td colspan="10" class="conformidad">
+            <h3>CERTIFICO DE CONFORMIDAD Nro. {{DOCUMENTO}}</h3>
+        </td>
+    </tr>
+
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+
+    <tr>
+        <td colspan="10" style="background-color: darkgrey;"> 
+            <div><span><b>Datos del Ejecutor</b></span></div>
+        </td>
+    </tr>
+    <tr>    
+        <td colspan="2"> 
+            <span>Nombre y Apellidos:</span>
+        </td>
+        <td colspan="8">
+            <span>{{DUENNO}}</span>
+        </td>
+    </tr>
+    <tr>    
+        <td colspan="2"> 
+            <span> Licencia:</span>
+        </td>
+        <td colspan="8"> 
+            <span>{{LICENCIA}}</span>
+        </td>
+    </tr>
+    <tr>    
+
+        <td colspan="2"> 
+            <div><span>Dirección Particular</span></div>
+        </td>
+        <td colspan="8"> 
+            <div><span>{{DIRECCION}}</span></div>
+        </td>
+    </tr>
+    <tr>    
+        <td colspan="2"> 
+            <div><span>Cuenta Bancaria</span></div>
+        </td>
+        <td colspan="8"> 
+            <div><span>{{CUENTA}}</span></div>
+        </td>
+        
+    </tr>
+    <tr>    
+        <td colspan="10"> 
+            <span>Favor de efectuar pago a: Cuenta Bancaria: {{CUENTA}} Sucursal {{SUCURSAL}}</span>
+        </td>
+        
+    </tr>
+
+    <tr>
+        <td colspan="10"><hr></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    
+
+    <tr>
+        <td colspan="10" style="background-color: darkgrey;"> 
+            <div><span><b>Datos de la Entidad</b></span></div>
+        </td>
+        
+    </tr>
+    <tr>    
+        <td colspan="2"> 
+            <div><span>Nombre de la Entidad:</span></div>
+        </td>
+        <td colspan="8"> 
+            <div><span> {{CLIENTE}}</span></div>
+        </td>
+        
+    </tr>
+    <tr>    
+        <td colspan="2"> 
+            <div><span>Domicilio Legal</span></div>
+        </td>
+        <td colspan="8"> 
+            <div><span>{{DIRCLIENTE}}</span></div>
+        </td>
+        
+    </tr>
+    <tr>    
+        <td colspan="2"> 
+            <div><span>Cuenta Bancaria</span></div>
+        </td>
+        <td colspan="8"> 
+            <div><span>{{CTACLIENTE}}</span></div>
+        </td>                
+
+    </tr>
+
+    <tr>
+        <td colspan="10"><hr></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+
+    <tr>
+        <td colspan="10">
+            <div>
+                <span>Equipo: <u>{{EQUIPOS}} </u></span>
+            </div>
+
+        </td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td colspan="10">
+            <div>
+                <span>Trabajos realizados: <u>{{TRABAJOS}} </u></span>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td colspan="10">
+            <span>Certifico la conformidad con el trabajo realizado.</span>
+        </td>
+    </tr>
+
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+
+    <tr>
+        <td colspan="2">
+            <div>
+                <span><b>Nombre y Apellidos:</b> {{NOMBRE}}</span>
+            </div>
+            <div>
+                <span><b>Firma:</b> ______________________</span>
+            </div>
+        </td>
+        <td colspan="6"> </td>
+        <td colspan="2">
+
+            <div>
+                <span><b>Elaborado por:</b> {{NOMBREFAC}}</span>
+            </div>
+            <div>
+                <span><b>Firma:</b> ______________________</span>
+            </div>
+
+        </td>
+    </tr>
+</table
