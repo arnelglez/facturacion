@@ -10,7 +10,7 @@ class mFactura:
 
     def cargarDatosFactura(self):
         listaFactura = list()
-        consulta = "SELECT * FROM factura"
+        consulta = "SELECT * FROM factura ORDER BY nofactura and fecha"
         respuestas =  self.data.consultaAll(consulta)
         if len(respuestas) > 0:
             for respuesta in respuestas:
