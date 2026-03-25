@@ -419,35 +419,36 @@ class BaseTaller:
 
     def abrir(self):
         conn = sqlite3.connect('taller.db')
+        # Activar modo WAL para mejorar concurrencia
+        conn.execute('PRAGMA journal_mode=WAL;')
         return conn
     
     def consultaOne(self, consulta):
-        conn = self.abrir()
-        cursor = conn.cursor()
-        cursor.execute(consulta)
-        return cursor.fetchone()
+        with self.abrir() as conn:
+            cursor = conn.cursor()
+            cursor.execute(consulta)
+            return cursor.fetchone()
 
     def consultaAll(self, consulta):
-        conn = self.abrir()
-        cursor = conn.cursor()
-        cursor.execute(consulta)
-        return cursor.fetchall()
+        with self.abrir() as conn:
+            cursor = conn.cursor()
+            cursor.execute(consulta)
+            return cursor.fetchall()
 
     def consultaBusqueda(self, consulta, datos):
-        conn = self.abrir()
-        cursor = conn.cursor()
-        cursor.execute(consulta, datos)
-        return cursor.fetchall()
+        with self.abrir() as conn:
+            cursor = conn.cursor()
+            cursor.execute(consulta, datos)
+            return cursor.fetchall()
 
     def consultaParametros(self, consulta, datos):
-        conn = self.abrir()
-        cursor = conn.cursor()
-        cursor.execute(consulta, datos)
-        return cursor.fetchone()
+        with self.abrir() as conn:
+            cursor = conn.cursor()
+            cursor.execute(consulta, datos)
+            return cursor.fetchone()
 
     def guardarEditar(self, consulta, datos):
-        conn = self.abrir()
-        cursor = conn.cursor()
-        cursor.execute(consulta, datos)
-        conn.commit()
-        conn.close()
+        with self.abrir() as conn:
+            cursor = conn.cursor()
+            cursor.execute(consulta, datos)
+            conn.commit()
