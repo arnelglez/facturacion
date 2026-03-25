@@ -10,5 +10,8 @@
 /package-lock.json
 /package.json
 /taller.db
+/venv
+/.python-version
+/taller*
 
 *.pyc
